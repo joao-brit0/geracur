@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.n-container{
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+}
+.n-container li a{
+	color: #0D0C02;
+}
+.header-description{
+	width: 100%;
+	height: 50vh;
+	background-color: #FAE20C;
+	color: #0D0C02;
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2rem;
+	position: relative;
+}
+.header-description__button{
+	color: #FFFFFF;
+	text-decoration: underline #FFF;
+	font-size: 1rem;
+	position: absolute;
+	left: 2rem;
+	bottom: 2rem;
+}
+.header-description__button:hover{
+	color: #0D0C02;
+}
+.container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+.container__meta,
+.container__name,
+.container__training,
+.container__experience,
+.container__observation,
+.container__address{
+	margin: 2rem;
+	font-size: .60rem;
+}
+textarea{
+	width: 20rem;
+	height: 4rem;
+	resize: none;
+}
+.container__download{
+	display: flex;
+	justify-content: center;
+}
+.container__btndownload{
+	padding: 1rem 5rem;
+	font-size: 1rem;
+	background-color: #FAE20C;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+}
+.container__btndownload:hover{
+	color: #0D0C02;
+	transition: .5s;
+}
+.curriculo-generation__name,
+.curriculo-generation__meta,
+.curriculo-generation__training,
+.curriculo-generation__experience,
+.curriculo-generation__observation,
+.curriculo-generation__address{
+	margin: 2rem;
+}
+.section-meta{
+	background-color: #ebebeb;
+	padding: 2rem;
+	margin-top: 2rem;
+	text-align: justify;
+	font-size: .90rem;
+	color: #0D0C02;
+	width: 90vw;
+	border-radius: 2rem;
+}
+.section-meta ul li{
+	margin-top: 1.5rem;
+}
+.footer-container{
+	width: 100%;
+	background-color: #FAE20C;
+	padding: 2rem;
+	color: #FFF;
+	margin-top: 2rem;
+	font-size: .80rem;
+	text-align: center;
+}
+.baixado{
+	display: none;
+}
+.baixado.visible{
+	position: absolute;
+	top: 2rem;
+	padding: 1rem;
+	background-color: #00af54;
+	color: #FFFF;
+	border-radius: 1.5rem;
+	display: block;
+}
