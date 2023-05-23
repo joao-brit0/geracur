@@ -5,58 +5,101 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Style/style.css">
-	<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
         <title>GeraCu</title>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="ScriptJS/script.js" defer></script>
     </head>
     <body>
-    	<header>
+    	<header class="header-container">
     		<nav class="n-container">
     			<ul class="n-container__list">
-    				<li><a href="#">GeraCu</a></li>
+    				<li><a href="index.html">GeraCur</a></li>
     			</ul>
     		</nav>
+    		<div class="header-container__descriptionAndImage">
+    			<div class="header-description">
+	    			<p>Bem-vindo ao <strong>GeraCur!</strong> Melhor gerador de currículo online, fácil, grátis e sem enrolação. Pode começar.</p>
+	    			<ul class="header-description__list">
+	    				<li>Baixe em PDF</li>
+	    				<li>Alta resolução</li>
+	    				<li>Ilimitado</li>
+	    			</ul>
+	    			<div class="header-description__container-btns">
+	    				<a href="know-more.html" class="header-description__button-more">Saiba mais</a>
+	    				<a href="#create" class="header-description__button-creat">Criar</a>
+	    			</div>
+    			</div>
+    			<div class="header-container__image">
+    				<img src="Images/curriculo-design.jpg" class="header-container__image-img">
+    			</div>
+    		</div>
     	</header>
-    	<div class="header-description">
-    		<p>Bem-vindo ao <strong>GeraCu!</strong> Melhor gerador de currículo online, fácil, grátis e sem enrolação. Pode começar.</p>
-    		<a href="#" class="header-description__button">Saiba mais</a>
-    	</div>
-        <main class="container">
-        	<div class="container__name">
+    	<p class="main-container__text-data">Digite seus dados</p>
+        <main id="create" class="main-container">
+        	<div class="main-container__name">
         		<h2>Seu nome</h2>
         		<textarea type="text" class="container__name__text"></textarea>
         	</div>
-        	<div class="container__address">
-        		<h2>Seu endereço</h2>
-        		<textarea type="text" class="container__address__text"></textarea>
+        	<div class="main-container__data">
+        		<h2>Dados pessoais</h2>
+        		<ion-icon name="help-circle-outline" class="main-container__data__icon"></ion-icon>
+        		<textarea type="text" class="container__data__text"></textarea>
+        		<div class="main-container__data__doubt">
+        			<p>Digite todos os dados necessários para contato, por exemplo, e-mail e números para contato. Não esqueça de colocar seu endereço.</p>
+        		</div>
         	</div>
-        	<div class="container__meta">
+        	<div class="main-container__meta">
         		<h2>Objetivo</h2>
         		<textarea type="text" class="container__meta__text"></textarea>
         	</div>
-        	<div class="container__training">
+        	<div class="main-container__training">
         		<h2>Formação</h2>
         		<textarea type="text" class="container__training__text"></textarea>
         	</div>
-        	<div class="container__experience">
+        	<div class="main-container__experience">
         		<h2>Experiência</h2>
         		<textarea type="text" class="container__experience__text"></textarea>
         	</div>
-        	<div class="container__observation">
+        	<div class="main-container__observation">
         		<h2>Observação</h2>
         		<textarea type="text" class="container__observation__text"></textarea>
         	</div>
+        	<div class="main-container__observation">
+        		<h2>Adicionar foto </h2>
+        		<label for="add-img">
+        			<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><circle cx="256" cy="272" r="64"/><path d="M432 144h-59c-3 0-6.72-1.94-9.62-5l-25.94-40.94a15.52 15.52 0 00-1.37-1.85C327.11 85.76 315 80 302 80h-92c-13 0-25.11 5.76-34.07 16.21a15.52 15.52 0 00-1.37 1.85l-25.94 41c-2.22 2.42-5.34 5-8.62 5v-8a16 16 0 00-16-16h-24a16 16 0 00-16 16v8h-4a48.05 48.05 0 00-48 48V384a48.05 48.05 0 0048 48h352a48.05 48.05 0 0048-48V192a48.05 48.05 0 00-48-48zM256 368a96 96 0 1196-96 96.11 96.11 0 01-96 96z"/></svg>
+        		</label>
+        		<span>(opcional)</span>
+        		<input type="file" name="add-img" id="add-img" class="main-container__observation__input-image">
+        	</div>
         </main>
-        <div class="container__download">
-        	<button class="container__btndownload">Baixar</button>
+        <div class="main-container__download">
+        	<button class="main-container__btndownload">Baixar</button>
         </div>
         <div class="curriculo-generation">
-        	
+        	<img class="img-upload" src="">
         </div>
+        <section class="section-tips">
+        	<p class="section-tips__title">Dicas para um bom currículo</p>
+        	<div class="section-tips__cards">
+        		<ion-icon name="image-outline" class="section-tips__cards__icons"></ion-icon>
+        		<p>Avalie se a foto é relevante para a posição à qual você está se candidatando. Se a aparência física for uma parte essencial do trabalho, como em empregos de atuação ou modelos, incluir uma foto pode ser benéfico. No entanto, para a maioria das posições, suas habilidades e experiência são os fatores mais importantes.</p>
+        	</div>
+        	<div class="section-tips__cards">
+        		<ion-icon name="newspaper-outline" class="section-tips__cards__icons"></ion-icon>
+        		<p>Lembre-se de que um currículo deve ser objetivo, relevante e fácil de ler. Destaque suas conquistas e qualificações de forma clara e concisa, capturando a atenção do empregador e mostrando por que você é um ótimo candidato para a vaga.</p>
+        	</div>
+        	<div class="section-tips__cards">
+        		<ion-icon name="flag-outline" class="section-tips__cards__icons"></ion-icon>
+        		<p>Liste suas experiências profissionais relevantes em ordem cronológica inversa (do mais recente ao mais antigo). Inclua o nome da empresa, cargo ocupado, período de trabalho e uma breve descrição das responsabilidades e realizações. Destaque suas conquistas, resultados e impacto positivo que você trouxe para a empresa.</p>
+        	</div>
+        </section>
         <section class="section-meta">
         	<p><strong>Objetivo</strong>: Escrever um bom objetivo no currículo é uma forma de transmitir de forma clara e concisa suas metas e interesses profissionais. Aqui estão algumas dicas para criar um texto de objetivo eficaz:</p>
         	<ul>
@@ -76,7 +119,7 @@
         	<p>Currículo baixado!</p>
         </div>
         <footer class="footer-container">
-        	<h3>&copy GeraCu, todos os direitos reservados</h3>
+        	<h3>&copy GeraCur, todos os direitos reservados.</h3>
         </footer>
     </body>
 </html>
