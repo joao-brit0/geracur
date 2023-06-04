@@ -4,12 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Crie seus currículos de forma rápida, fácil e prática. O Geracur é um gerador de currículos totalmente gratuito.">
         <link rel="stylesheet" href="Style/style.css">
+        <link rel="stylesheet" href="Style/curriculo-style.css">
         <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
-        <title>GeraCu</title>
+        <title>GeraCur - Gerador de Currículo</title>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -43,11 +45,11 @@
     	<p class="main-container__text-data">Digite seus dados</p>
         <main id="create" class="main-container">
         	<div class="main-container__name">
-        		<h2>Seu nome</h2>
+        		<h2>Seu nome *</h2>
         		<textarea type="text" class="container__name__text"></textarea>
         	</div>
         	<div class="main-container__data">
-        		<h2>Dados pessoais</h2>
+        		<h2>Dados pessoais *</h2>
         		<ion-icon name="help-circle-outline" class="main-container__data__icon"></ion-icon>
         		<textarea type="text" class="container__data__text"></textarea>
         		<div class="main-container__data__doubt">
@@ -55,32 +57,38 @@
         		</div>
         	</div>
         	<div class="main-container__meta">
-        		<h2>Objetivo</h2>
+        		<h2>Objetivo *</h2>
         		<textarea type="text" class="container__meta__text"></textarea>
         	</div>
         	<div class="main-container__training">
-        		<h2>Formação</h2>
+        		<h2>Formação *</h2>
         		<textarea type="text" class="container__training__text"></textarea>
         	</div>
         	<div class="main-container__experience">
-        		<h2>Experiência</h2>
-        		<textarea type="text" class="container__experience__text"></textarea>
+        		<h2>Experiência *</h2>
+        		<textarea type="text" class="container__experience__text requiredt"></textarea>
         	</div>
         	<div class="main-container__observation">
         		<h2>Observação</h2>
         		<textarea type="text" class="container__observation__text"></textarea>
         	</div>
-        	<div class="main-container__observation">
-        		<h2>Adicionar foto </h2>
+        	<div class="main-container__photograph">
+        		<h2>Adicionar foto</h2>
         		<label for="add-img">
         			<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><circle cx="256" cy="272" r="64"/><path d="M432 144h-59c-3 0-6.72-1.94-9.62-5l-25.94-40.94a15.52 15.52 0 00-1.37-1.85C327.11 85.76 315 80 302 80h-92c-13 0-25.11 5.76-34.07 16.21a15.52 15.52 0 00-1.37 1.85l-25.94 41c-2.22 2.42-5.34 5-8.62 5v-8a16 16 0 00-16-16h-24a16 16 0 00-16 16v8h-4a48.05 48.05 0 00-48 48V384a48.05 48.05 0 0048 48h352a48.05 48.05 0 0048-48V192a48.05 48.05 0 00-48-48zM256 368a96 96 0 1196-96 96.11 96.11 0 01-96 96z"/></svg>
         		</label>
         		<span>(opcional)</span>
         		<input type="file" name="add-img" id="add-img" class="main-container__observation__input-image">
+        		<div class="main-container__select-color">
+        			<h2>Cor do currículo</h2>
+        			<label class="main-container__btn-color-label" for="btncolor"></label>
+        			<input type="color" class="main-container__btn-color" name="btncolor" id="btncolor">
+        		</div>
         	</div>
         </main>
         <div class="main-container__download">
-        	<button class="main-container__btndownload">Baixar</button>
+        	<button class="main-container__btndownload">Baixar<ion-icon name="cloud-download-outline" class="icon-download"></ion-icon></button>
+        	<a href="#" class="btn-curriculum-model">Modelo</a>
         </div>
         <div class="curriculo-generation">
         	<img class="img-upload" src="">
@@ -101,22 +109,33 @@
         	</div>
         </section>
         <section class="section-meta">
-        	<p><strong>Objetivo</strong>: Escrever um bom objetivo no currículo é uma forma de transmitir de forma clara e concisa suas metas e interesses profissionais. Aqui estão algumas dicas para criar um texto de objetivo eficaz:</p>
-        	<ul>
-        		<li>1. Seja específico: Evite declarações genéricas e vagas. Em vez disso, concentre-se em uma área ou posição específica em que esteja interessado. Por exemplo, em vez de dizer "Procuro oportunidades de crescimento profissional", você poderia dizer "Busco uma posição desafiadora na área de marketing digital".</li>
-        		<li>2. Destaque suas habilidades e experiências relevantes: Mencione as habilidades e experiências que você possui e que são relevantes para o cargo almejado. Isso ajudará a mostrar sua adequação para a vaga. Por exemplo, se estiver se candidatando a um cargo de gerente de projetos, você pode mencionar sua experiência em liderança e gerenciamento de equipe.</li>
-        		<li>3. Seja breve e objetivo: O objetivo deve ser conciso, geralmente consistindo em uma ou duas frases curtas. Evite detalhes desnecessários ou informações irrelevantes. Foque no essencial.</li>
-        		<li>4. Demonstre entusiasmo e motivação: Além de descrever seus objetivos, mostre entusiasmo e paixão pela área em que deseja atuar. Isso pode transmitir seu comprometimento e dedicação.</li>
-        		<li>5. Personalize para cada vaga: Ao se candidatar a diferentes posições, adapte seu objetivo para refletir as necessidades e requisitos específicos de cada vaga. Isso mostrará que você fez sua pesquisa e está realmente interessado na oportunidade.</li>
-        	</ul>
-
-
-        	<p>Aqui está um exemplo de um objetivo bem formulado para um currículo: "Busco uma posição desafiadora na área de marketing, onde posso aplicar minha experiência em análise de dados e desenvolvimento de estratégias para impulsionar o crescimento da empresa. Tenho paixão por explorar tendências de mercado e criar campanhas inovadoras que gerem resultados mensuráveis."
-
-			Lembre-se de que o objetivo é apenas uma parte do currículo e deve ser complementado por outras seções, como experiência profissional, habilidades, formação acadêmica e assim por diante.</p>
+        	<div  class="section-meta__container-img">
+        		<img src="Images/ilustration-work.png" class="section-meta__container-img__image">
+        		<div class="section-meta__container-text">
+        			<p>Um site de gerador de currículo pode ser uma ferramenta extremamente útil para ajudar indivíduos a criar currículos profissionais e impactantes. Com a crescente competitividade no mercado de trabalho, ter um currículo bem elaborado é essencial para se destacar entre os candidatos.</p>
+        		</div>
+        	</div>
+        	<div  class="section-meta__container-img">
+        		<img src="Images/illustration-create.jpg" class="section-meta__container-img__image d">
+        		<div class="section-meta__container-text a">
+        			<p>Um gerador de currículo simplifica todo o processo de criação, fornecendo uma estrutura pré-formatada e modelos prontos para uso. Isso é especialmente benéfico para pessoas que têm dificuldade em organizar suas informações ou que não têm experiência em design de currículo.</p>
+        		</div>
+        	</div>
+        	<div  class="section-meta__container-img">
+        		<img src="Images/illustration-p.png" class="section-meta__container-img__image">
+        		<div class="section-meta__container-text">
+        			<p>Ao utilizar um site de gerador de currículo, os usuários podem preencher facilmente as seções relevantes com suas informações pessoais, histórico educacional, experiência profissional, habilidades, projetos e realizações. O gerador também oferece sugestões de palavras-chave e frases impactantes que ajudam a destacar as qualificações e habilidades do candidato.</p>
+        		</div>
+        	</div>
         </section>
-        <div class="baixado">
-        	<p>Currículo baixado!</p>
+        <div class="model-curriculum">
+        	<div class="model-curriculum-items">
+        		<div class="model-curriculum__imge-container">
+        			<img src="Images/curriculum-model.jpeg">
+        			<p>Apenas para exemplo.</p>
+        		</div>
+        	</div>	
+        	<button class="model-curriculum__btn-close"><ion-icon name="close-circle-outline"></ion-icon></button>
         </div>
         <footer class="footer-container">
         	<h3>&copy GeraCur, todos os direitos reservados.</h3>

@@ -1,0 +1,62 @@
+
+.curriculo-generation__name,
+.curriculo-generation__meta,
+.curriculo-generation__training,
+.curriculo-generation__experience,
+.curriculo-generation__observation,
+.curriculo-generation__data{
+	margin: 2rem;
+}
+.text-curriculo{
+	margin-left: 1.5rem;
+	text-indent: 15px;
+}
+.model-curriculum{
+	display: none;
+}
+.model-curriculum.curriculum-model-visible{
+	display: block;
+}
+.model-curriculum-items{
+	width: 100%;
+	height: 100vh;
+	background: rgba(23, 22, 22, 0.2);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(1.4px);
+	-webkit-backdrop-filter: blur(1.4px);
+	border: 1px solid rgba(23, 22, 22, 0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.model-curriculum__imge-container{
+	width: 45%;
+	height: 90%;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.model-curriculum__btn-close{
+	font-size: 2.5rem;
+	color: #e0e1dd;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+@media(max-width: 500px){
+	.model-curriculum__imge-container{
+		width: 90%;
+		height: 95%;
+	}
+	.model-curriculum__btn-close{
+		color: #000;
+	}
+}

@@ -1,6 +1,5 @@
 const btnDownload = document.querySelector('.main-container__btndownload')
 
-
 function readImage() {
     if (this.files && this.files[0]) {
         let file = new FileReader();
@@ -14,9 +13,17 @@ function imgVisible() {
 	const foto = document.querySelector(".img-upload")
 	foto.classList.add('img-visible')
 }
-
 document.querySelector(".main-container__observation__input-image").addEventListener("change", readImage, false);
 document.querySelector(".main-container__observation__input-image").addEventListener("change", imgVisible)
+
+
+const btnColor = document.querySelector(".main-container__btn-color")
+const labelBtnColor = document.querySelector('.main-container__btn-color-label')
+btnColor.addEventListener('change', () => {
+	labelBtnColor.style.background = btnColor.value
+	console.log(btnColor.value)
+})
+
 
 btnDownload.addEventListener("click", () => { 
 	let name = document.querySelector('.container__name__text').value
@@ -34,25 +41,26 @@ btnDownload.addEventListener("click", () => {
 	        	<h1 class="curriculo-generation__name__h1">${name}</h1>
 	        </div>
 	        <div class="curriculo-generation__data">
-	        	<h2 class="curriculo-generation__data__text">Dados pessoais</h2>
+	        	<h2 class="curriculo-generation__data__text" style="color:${btnColor.value}">Dados pessoais</h2>
 	        	<p class="text-curriculo">${data}</p>
 	        </div>
 	        <div class="curriculo-generation__meta">
-	        	<h2>Objetivo</h2>
+	        	<h2 style="color:${btnColor.value}">Objetivo</h2>
 	        	<p class="curriculo-generation__meta__paragraph text-curriculo">${meta}</p>
 	        </div>
 	        <div class="curriculo-generation__training">
-	        	<h2>Formação</h2>
+	        	<h2 style="color:${btnColor.value}">Formação</h2>
 	        	<p class="text-curriculo">${training}</p>
 	        </div>
 	        <div class="curriculo-generation__experience">
-	        	<h2>Experiência</h2>
+	        	<h2 style="color:${btnColor.value}">Experiência</h2>
 	        	<p class="curriculo-generation__experience__paragraph text-curriculo">${experience}</p>
 	        </div>
 	        <div class="curriculo-generation__observation">
-	        	<h2>Observação</h2>
+	        	<h2 style="color:${btnColor.value}">Observação</h2>
 	        	<p class="curriculo-generation__observation__paragraph text-curriculo">${observation}</p>
 	        </div>`
+	        
 	        curriculoMolde.innerHTML = curriculoMolde.innerHTML + generation
 		
 		const opt = {
@@ -65,12 +73,6 @@ btnDownload.addEventListener("click", () => {
 
 		html2pdf().set(opt).from(curriculoMolde).save()
 		
-		const donwloadConfimerd = document.querySelector('.baixado')
-		donwloadConfimerd.classList.add('visible')
-		function remiver() {
-			donwloadConfimerd.classList.remove('visible')
-		}
-		setTimeout(remiver, 5000)
 		console.log(name, data, meta, training, experience, observation)
 
 	}else{
@@ -79,10 +81,24 @@ btnDownload.addEventListener("click", () => {
 	
 })
 
-//document.querySelector(".main-container__observation__input-image").addEventListener("change", readImage, false);
-const btnDoubt = document.querySelector('.main-container__data__icon')
 
+const btnDoubt = document.querySelector('.main-container__data__icon')
 btnDoubt.addEventListener('click', () => {
 	const textDoubt = document.querySelector('.main-container__data__doubt')
 	textDoubt.classList.toggle('doubt_visible')
+	setTimeout(() => {
+		textDoubt.classList.toggle('doubt_visible')
+	}, 5000)
+})
+
+
+const modelCurriculum = document.querySelector('.model-curriculum')
+const btnCurriculumModel = document.querySelector('.btn-curriculum-model')
+btnCurriculumModel.addEventListener('click', () => {
+	modelCurriculum.classList.toggle('curriculum-model-visible')
+	document.querySelector('body').style.overflow = "hidden"
+})
+document.querySelector('.model-curriculum__btn-close').addEventListener('click', () => {
+	modelCurriculum.classList.toggle('curriculum-model-visible')
+	document.querySelector('body').style.overflow = "visible"
 })
