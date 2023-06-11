@@ -1,0 +1,43 @@
+.header-container{
+	background-image: url(../Images/meta-modal-img.jpg);
+	background-repeat: no-repeat;
+	background-position: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.header-container h1{
+	font-size: 3rem;
+	color: #e0e1dd;
+}
+.meta-examples-container{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.meta-examples-container__card{
+	width: 25rem;
+	-webkit-box-shadow: 10px 10px 18px -1px rgba(150,148,150,0.6);
+	-moz-box-shadow: 10px 10px 18px -1px rgba(150,148,150,0.6);
+	box-shadow: 10px 10px 18px -1px rgba(150,148,150,0.6);
+	border-radius: .80rem;
+	padding: 1.5rem;
+	margin-top: 2rem;
+	transition: .3s;
+	position: relative;
+}
+.meta-examples-container__card:hover{
+	transform: scale(1.1);
+	transition: .3s;
+}
+.meta-examples-container__card p{
+	font-family: 'Kalam', cursive;
+	color: #000;
+}
+.meta-examples-container__card__button{
+	background: none;
+	border: none;
+	color: #1A1919;
+	font-size: 1.5rem;
+	cursor: pointer;	
+}

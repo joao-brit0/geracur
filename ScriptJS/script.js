@@ -86,9 +86,6 @@ const btnDoubt = document.querySelector('.main-container__data__icon')
 btnDoubt.addEventListener('click', () => {
 	const textDoubt = document.querySelector('.main-container__data__doubt')
 	textDoubt.classList.toggle('doubt_visible')
-	setTimeout(() => {
-		textDoubt.classList.toggle('doubt_visible')
-	}, 5000)
 })
 
 
@@ -101,4 +98,35 @@ btnCurriculumModel.addEventListener('click', () => {
 document.querySelector('.model-curriculum__btn-close').addEventListener('click', () => {
 	modelCurriculum.classList.toggle('curriculum-model-visible')
 	document.querySelector('body').style.overflow = "visible"
+})
+const metaModal = document.querySelector('.container-meta-modal')
+const metaModalBtn = document.querySelector('.container-meta-modal-content__btn-close')
+window.addEventListener('load', () => {
+	setTimeout(metaModalLoad, 7000)
+})
+function metaModalLoad() {
+	metaModal.classList.add('modalVisible')
+	setTimeout(metaModalRemove, 7000)
+	//document.querySelector('body').style.overflow = "hidden"
+}
+function metaModalRemove() {
+	if (metaModal.classList.contains('modalVisible')) {
+		metaModal.classList.remove('modalVisible')
+	}
+}
+metaModalBtn.addEventListener('click', () => {
+	metaModal.classList.remove('modalVisible')
+})
+const btnMenu = document.querySelector('.btn-menu-mobile')
+const btnCloseMenuMobile = document.querySelector('.btn-menu-mobile-close')
+const listMenuMobile = document.querySelector('.n-container__mobile-menu')
+btnMenu.addEventListener('click', () => {
+	listMenuMobile.classList.toggle('open')
+	btnCloseMenuMobile.classList.toggle('btnClose')
+	btnMenu.classList.toggle('btnClose')
+})
+btnCloseMenuMobile.addEventListener('click', () => {
+	listMenuMobile.classList.toggle('open')
+	btnCloseMenuMobile.classList.toggle('btnClose')
+	btnMenu.classList.toggle('btnClose')
 })

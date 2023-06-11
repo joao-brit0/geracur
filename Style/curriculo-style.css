@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 
 .curriculo-generation__name,
 .curriculo-generation__meta,
@@ -10,6 +12,16 @@
 .text-curriculo{
 	margin-left: 1.5rem;
 	text-indent: 15px;
+}
+.img-upload{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 40px;
+	margin-left: 2rem;
+	display: none;
+}
+.img-upload.img-visible{
+	display: block;
 }
 .model-curriculum{
 	display: none;
@@ -31,10 +43,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 1000;
 }
 .model-curriculum__imge-container{
-	width: 45%;
-	height: 90%;
+	width: 55%;
+	height: 96%;
 	background-color: #FFFFFF;
 	display: flex;
 	justify-content: center;
@@ -43,13 +56,94 @@
 }
 .model-curriculum__btn-close{
 	font-size: 2.5rem;
-	color: #e0e1dd;
+	color: #000;
 	position: absolute;
 	top: 2rem;
 	right: 2rem;
 	cursor: pointer;
 	background: none;
 	border: none;
+	z-index: 1000;
+}
+.container-meta-modal{
+	background-color: rgba(0,0,0,.3);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+.container-meta-modal{
+	display: none;
+}
+.container-meta-modal.modalVisible{
+	display: flex;
+}
+.container-meta-modal-content{
+	width: 80vw;
+	height: 90%;
+	border-radius: 1.5rem;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+.container-meta-modal__container-img{
+	width: 50%;
+	height: 100%;
+	background-color: red;
+}
+.container-meta-modal__container-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container-meta-modal__container-text{
+	width: 50%;
+	height: 100%;
+	background-color: #FFF;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container-meta-modal__container-text__title{
+	color: #0d1b2a;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	padding-bottom: 1.5rem;
+	border-bottom: .30rem solid #0d1b2a;
+}
+.container-meta-modal__container-text__para__paragraph{
+	color: #363636;
+	margin-top: 2rem;
+	text-indent: .80rem;
+}
+.container-meta-modal__container-text__para__paragraph-example{
+	color: #454545;
+	font-family: 'Kalam', cursive;
+	margin-top: 2rem;
+}
+.container-meta-modal-content__btn-close{
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	color: #363636;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+.container-meta-modal__container-text__link{
+	padding: 1.2rem 7rem;
+	margin-top: 3rem;
+	background-color: #1287D5;
+	color: #FFF;
+	border-radius: 1.5rem;
 }
 @media(max-width: 500px){
 	.model-curriculum__imge-container{
@@ -58,5 +152,59 @@
 	}
 	.model-curriculum__btn-close{
 		color: #000;
+	}
+	.container-meta-modal{
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+	}
+	.container-meta-modal-content{
+		width: 80vw;
+		height: 95vh;
+		border-radius: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+	.container-meta-modal__container-img{
+		width: 100%;
+		height: 25%;
+		background-color: #FFFFFF;
+	}
+	.container-meta-modal__container-img img{
+		width: 100%;
+		height: 100%;
+	}
+	.container-meta-modal__container-text{
+		width: 100%;
+		height: 75%;
+		padding: 1rem;
+	}
+	.container-meta-modal__container-text__title{
+		font-size: 1.3rem;
+		padding-bottom: 1.3rem;
+		border-bottom: .30rem solid #0d1b2a;
+	}
+	.container-meta-modal__container-text__para__paragraph{
+		margin-top: .70rem;
+		text-indent: .80rem;
+	}
+	.container-meta-modal__container-text__para__paragraph-example{
+		margin-top: .70rem;
+	}
+	.container-meta-modal-content__btn-close{
+		font-size: 2rem;
+		color: #FFFFFF;
+	}
+	.container-meta-modal__container-text__link{
+		padding: .80rem 5rem;
+		margin-top: 1.3rem;
+	}
+	.model-curriculum__btn-close{
+		font-size: 2rem;
+		right: 3rem;
 	}
 }

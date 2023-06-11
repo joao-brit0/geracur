@@ -21,8 +21,21 @@
     	<header class="header-container">
     		<nav class="n-container">
     			<ul class="n-container__list">
-    				<li><a href="index.html">GeraCur</a></li>
+    				<li><a href="#" class="n-container__list__pages">Modelo de currículo</a></li>
+    				<li><a href="index.html" class="n-container__list__logo">GeraCur</a></li>
+    				<li><a href="meta-example.html" class="n-container__list__pages">Objetivos prontos</a></li>
     			</ul>
+    			<a href="index.html" class="n-container__list__logo mobile">GeraCur</a>
+    			<button class="btn-menu-mobile"><ion-icon name="menu-outline"></ion-icon></button>
+    			<button class="btn-menu-mobile-close btnClose"><ion-icon name="close-outline"></ion-icon></button>
+    			<div class="n-container__mobile-menu">
+    				<ul class="n-container__list-mobile">
+    					<li><a href="#" class="n-container__list__pages">Modelo de currículo</a></li>
+    					<li><a href="index.html" class="n-container__list__logo">GeraCur</a></li>
+    					<li><a href="meta-example.html" class="n-container__list__pages">Objetivos prontos</a></li>
+    					<li><a href="#section-tips-id" class="n-container__list__pages">Dicas</a></li>
+    				</ul>
+    			</div>
     		</nav>
     		<div class="header-container__descriptionAndImage">
     			<div class="header-description">
@@ -93,36 +106,42 @@
         <div class="curriculo-generation">
         	<img class="img-upload" src="">
         </div>
-        <section class="section-tips">
+        <section class="section-tips" id="section-tips-id">
         	<p class="section-tips__title">Dicas para um bom currículo</p>
         	<div class="section-tips__cards">
-        		<ion-icon name="image-outline" class="section-tips__cards__icons"></ion-icon>
+        		<div>
+        			<ion-icon name="image-outline" class="section-tips__cards__icons"></ion-icon>
+        		</div>
         		<p>Avalie se a foto é relevante para a posição à qual você está se candidatando. Se a aparência física for uma parte essencial do trabalho, como em empregos de atuação ou modelos, incluir uma foto pode ser benéfico. No entanto, para a maioria das posições, suas habilidades e experiência são os fatores mais importantes.</p>
         	</div>
         	<div class="section-tips__cards">
-        		<ion-icon name="newspaper-outline" class="section-tips__cards__icons"></ion-icon>
+        		<div>
+        			<ion-icon name="newspaper-outline" class="section-tips__cards__icons"></ion-icon>
+        		</div>
         		<p>Lembre-se de que um currículo deve ser objetivo, relevante e fácil de ler. Destaque suas conquistas e qualificações de forma clara e concisa, capturando a atenção do empregador e mostrando por que você é um ótimo candidato para a vaga.</p>
         	</div>
         	<div class="section-tips__cards">
-        		<ion-icon name="flag-outline" class="section-tips__cards__icons"></ion-icon>
+        		<div>
+        			<ion-icon name="flag-outline" class="section-tips__cards__icons"></ion-icon>
+        		</div>        		
         		<p>Liste suas experiências profissionais relevantes em ordem cronológica inversa (do mais recente ao mais antigo). Inclua o nome da empresa, cargo ocupado, período de trabalho e uma breve descrição das responsabilidades e realizações. Destaque suas conquistas, resultados e impacto positivo que você trouxe para a empresa.</p>
         	</div>
         </section>
         <section class="section-meta">
         	<div  class="section-meta__container-img">
-        		<img src="Images/ilustration-work.png" class="section-meta__container-img__image">
+        		<img src="Images/illustration-work.jpg" class="section-meta__container-img__image">
         		<div class="section-meta__container-text">
         			<p>Um site de gerador de currículo pode ser uma ferramenta extremamente útil para ajudar indivíduos a criar currículos profissionais e impactantes. Com a crescente competitividade no mercado de trabalho, ter um currículo bem elaborado é essencial para se destacar entre os candidatos.</p>
         		</div>
         	</div>
         	<div  class="section-meta__container-img">
-        		<img src="Images/illustration-create.jpg" class="section-meta__container-img__image d">
+        		<img src="Images/illustration-create2.jpg" class="section-meta__container-img__image d">
         		<div class="section-meta__container-text a">
         			<p>Um gerador de currículo simplifica todo o processo de criação, fornecendo uma estrutura pré-formatada e modelos prontos para uso. Isso é especialmente benéfico para pessoas que têm dificuldade em organizar suas informações ou que não têm experiência em design de currículo.</p>
         		</div>
         	</div>
         	<div  class="section-meta__container-img">
-        		<img src="Images/illustration-p.png" class="section-meta__container-img__image">
+        		<img src="Images/illustration-work-3.jpg" class="section-meta__container-img__image">
         		<div class="section-meta__container-text">
         			<p>Ao utilizar um site de gerador de currículo, os usuários podem preencher facilmente as seções relevantes com suas informações pessoais, histórico educacional, experiência profissional, habilidades, projetos e realizações. O gerador também oferece sugestões de palavras-chave e frases impactantes que ajudam a destacar as qualificações e habilidades do candidato.</p>
         		</div>
@@ -136,6 +155,20 @@
         		</div>
         	</div>	
         	<button class="model-curriculum__btn-close"><ion-icon name="close-circle-outline"></ion-icon></button>
+        </div>
+        <div class="container-meta-modal">
+        	<div class="container-meta-modal-content">
+        		<button class="container-meta-modal-content__btn-close"><ion-icon name="close-circle-outline"></ion-icon></button>
+        		<div class="container-meta-modal__container-img">
+        			<img src="Images/meta-modal-img.jpg">
+        		</div>
+        		<div class="container-meta-modal__container-text">
+        			<p class="container-meta-modal__container-text__title">Precisando de uma ajuda para criar um bom objetivo?</p>
+        			<p class="container-meta-modal__container-text__para__paragraph">Preparamos uma lista com vários objetivos prontos para você apenas copiar e colar em seu currículo. Você também pode utliza-las como base para criar algo ainda mais pessoal.</p>
+        			<p class="container-meta-modal__container-text__para__paragraph-example">"Trabalhar neste setor (vagas selecionadas) ampliará o meu conhecimento, desenvolvimento profissional e de vida, em conjunto com a qualidade do meu trabalho e minha preparação para o dia, para alcançar o sucesso esperado a partir do momento da minha contratação."</p>
+        			<a href="meta-example.html" class="container-meta-modal__container-text__link">Saiba mais</a>
+        		</div>
+        	</div>
         </div>
         <footer class="footer-container">
         	<h3>&copy GeraCur, todos os direitos reservados.</h3>
