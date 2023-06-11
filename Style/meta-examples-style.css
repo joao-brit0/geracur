@@ -2,9 +2,24 @@
 	background-image: url(../Images/meta-modal-img.jpg);
 	background-repeat: no-repeat;
 	background-position: cover;
+	
+}
+.header-container__title{
+	text-align: center;
+	margin: 4rem auto;
+	width: 50vw;
+	
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+	
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	position: relative;
+	z-index: 7;
 }
 .header-container h1{
 	font-size: 3rem;
@@ -40,4 +55,18 @@
 	color: #1A1919;
 	font-size: 1.5rem;
 	cursor: pointer;	
+}
+@media(max-width: 500px){
+	.header-container__title{
+		padding: 1.5rem;
+		text-align: left;
+		margin: 30% auto;
+		width: 80%;
+	}
+	.header-container h1{
+		font-size: 2rem;
+	}
+	.meta-examples-container__card{
+		width: 23rem;
+	}
 }

@@ -90,11 +90,14 @@ btnDoubt.addEventListener('click', () => {
 
 
 const modelCurriculum = document.querySelector('.model-curriculum')
-const btnCurriculumModel = document.querySelector('.btn-curriculum-model')
-btnCurriculumModel.addEventListener('click', () => {
-	modelCurriculum.classList.toggle('curriculum-model-visible')
-	document.querySelector('body').style.overflow = "hidden"
-})
+const btnCurriculumModel = document.querySelectorAll('.btn-curriculum-model')
+for (let i = btnCurriculumModel.length - 1; i >= 0; i--) {
+		btnCurriculumModel[i].addEventListener('click', () => {
+		modelCurriculum.classList.toggle('curriculum-model-visible')
+		document.querySelector('body').style.overflow = "hidden"
+	})
+}
+
 document.querySelector('.model-curriculum__btn-close').addEventListener('click', () => {
 	modelCurriculum.classList.toggle('curriculum-model-visible')
 	document.querySelector('body').style.overflow = "visible"
@@ -124,6 +127,7 @@ btnMenu.addEventListener('click', () => {
 	listMenuMobile.classList.toggle('open')
 	btnCloseMenuMobile.classList.toggle('btnClose')
 	btnMenu.classList.toggle('btnClose')
+	console.log('test')
 })
 btnCloseMenuMobile.addEventListener('click', () => {
 	listMenuMobile.classList.toggle('open')
