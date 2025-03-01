@@ -1,5 +1,5 @@
 const metaBtnCopy = document.querySelectorAll('.meta-examples-container__card__button')
-let metaText = document.querySelectorAll(".meta-examples-container__card__text");
+let metaText = document.querySelectorAll(".meta-examples-container__card__text")
 
 for (var i = metaText.length - 1; i >= 0; i--) {
 	metaBtnCopy[i].addEventListener('click', clipboardCopy)
@@ -8,7 +8,7 @@ for (var i = metaText.length - 1; i >= 0; i--) {
  		await navigator.clipboard.writeText(metaTextCopy);
 	}
 }
-const btnMenu = document.querySelector('.btn-menu-mobile')
+/*const btnMenu = document.querySelector('.btn-menu-mobile')
 const btnCloseMenuMobile = document.querySelector('.btn-menu-mobile-close')
 const listMenuMobile = document.querySelector('.n-container__mobile-menu')
 btnMenu.addEventListener('click', () => {
@@ -24,5 +24,5 @@ btnCloseMenuMobile.addEventListener('click', () => {
 })
 
 
-console.log(metaBtnCopy, metaText)
+console.log(metaBtnCopy, metaText)*/
   
