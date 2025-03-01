@@ -11,12 +11,18 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
+		<link rel="stylesheet" href="Glider.js-master/glider.css">
+		<link rel="stylesheet" href="Style/meta-examples-style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <title>GeraCur - Gerador de Currículo</title>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="ScriptJS/script.js" defer></script>
-	
+		<script src="ScriptJS/meta-examples.js" defer></script>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1526012033991679"
+     	crossorigin="anonymous"></script>
+	 	
     </head>
     <body>
     	<header class="header-container">
@@ -24,7 +30,7 @@
     			<ul class="n-container__list">
     				<li><a href="#" class="n-container__list__pages btn-curriculum-model">Modelo de currículo</a></li>
     				<li><a href="index.html" class="n-container__list__logo">GeraCur</a></li>
-    				<li><a href="meta-example.html" class="n-container__list__pages">Objetivos prontos</a></li>
+    				<li><a href="#section-objective-id" class="n-container__list__pages">Objetivos prontos</a></li>
     			</ul>
     			<a href="index.html" class="n-container__list__logo mobile">GeraCur</a>
     			<button class="btn-menu-mobile"><ion-icon name="menu-outline"></ion-icon></button>
@@ -58,54 +64,184 @@
     	</header>
     	<p class="main-container__text-data">Digite seus dados</p>
         <main id="create" class="main-container">
-        	<div class="main-container__name">
-        		<h2>Seu nome *</h2>
-        		<textarea type="text" class="container__name__text"></textarea>
-        	</div>
-        	<div class="main-container__data">
-        		<h2>Dados pessoais *</h2>
-        		<ion-icon name="help-circle-outline" class="main-container__data__icon"></ion-icon>
-        		<textarea type="text" class="container__data__text"></textarea>
-        		<div class="main-container__data__doubt">
-        			<p>Digite todos os dados necessários para contato, por exemplo, e-mail e números para contato. Não esqueça de colocar seu endereço.</p>
-        		</div>
-        	</div>
-        	<div class="main-container__meta">
-        		<h2>Objetivo *</h2>
-        		<textarea type="text" class="container__meta__text"></textarea>
-        	</div>
-        	<div class="main-container__training">
-        		<h2>Formação *</h2>
-        		<textarea type="text" class="container__training__text"></textarea>
-        	</div>
-        	<div class="main-container__experience">
-        		<h2>Experiência *</h2>
-        		<textarea type="text" class="container__experience__text requiredt"></textarea>
-        	</div>
-        	<div class="main-container__observation">
-        		<h2>Observação</h2>
-        		<textarea type="text" class="container__observation__text"></textarea>
-        	</div>
-        	<div class="main-container__photograph">
-        		<h2>Adicionar foto</h2>
-        		<label for="add-img">
-        			<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><circle cx="256" cy="272" r="64"/><path d="M432 144h-59c-3 0-6.72-1.94-9.62-5l-25.94-40.94a15.52 15.52 0 00-1.37-1.85C327.11 85.76 315 80 302 80h-92c-13 0-25.11 5.76-34.07 16.21a15.52 15.52 0 00-1.37 1.85l-25.94 41c-2.22 2.42-5.34 5-8.62 5v-8a16 16 0 00-16-16h-24a16 16 0 00-16 16v8h-4a48.05 48.05 0 00-48 48V384a48.05 48.05 0 0048 48h352a48.05 48.05 0 0048-48V192a48.05 48.05 0 00-48-48zM256 368a96 96 0 1196-96 96.11 96.11 0 01-96 96z"/></svg>
-        		</label>
-        		<span>(opcional)</span>
-        		<input type="file" name="add-img" id="add-img" class="main-container__observation__input-image">
-        		<div class="main-container__select-color">
-        			<h2>Cor do currículo</h2>
-        			<label class="main-container__btn-color-label" for="btncolor"></label>
-        			<input type="color" class="main-container__btn-color" name="btncolor" id="btncolor">
-        		</div>
-        	</div>
+			
+        	
+			<section class="form-container">
+				<div class="main-container__name">
+					<h2>Seu nome *</h2>
+					<textarea type="text" class="container__name__text"></textarea>
+				</div>
+				<div class="main-container__linkeDin">
+					<h2>LinkedIn</h2>
+					<textarea type="text" class="container__linkeDin__text"></textarea>
+				</div>
+				<div class="main-container__address">
+					<ion-icon name="help-circle-outline" class="main-container__data__icon"></ion-icon>
+					<h2>Endereço</h2>
+					<textarea type="text" class="container__address__text"></textarea>
+					<div class="main-container__data__doubt">
+						<p>A inclusão do endereço no currículo pode variar dependendo da situação individual e das práticas regionais. Avalie a cultura empresarial e as normas de aplicação de empregos em sua área ao decidir se deve ou não incluir seu endereço.</p>
+					</div>
+				</div>
+				<div class="main-container__email">
+					<h2>E-mail *</h2>
+					<textarea type="text" class="container__email__text"></textarea>
+				</div>
+				<div class="main-container__contact">
+					<h2>Celular *</h2>
+					<textarea type="text" class="container__contact__text"></textarea>
+				</div>
+				<div class="main-container__meta">
+					<h2>Objetivo *</h2>
+					<textarea type="text" class="container__meta__text"></textarea>
+				</div>
+				<div class="main-container__training">
+					<span class="training-add-text">Adicionado</span>
+					<button class="btn-training-add">
+						<ion-icon name="add-circle"></ion-icon>
+					</button>
+					<h2>Formação *</h2>
+					
+					<textarea type="text" class="container__training__text training-text" placeholder="Adicione uma nova formação"></textarea>
+				</div>
+				<div class="main-container__experience">
+					<span class="training-add-text">Adicionado</span>
+					<button class="btn-training-add">
+						<ion-icon name="add-circle"></ion-icon>
+					</button>
+					<h2>Experiência</h2>
+					<textarea type="text" class="container__experience__text requiredt" placeholder="Adicione uma experiência profissional"></textarea>
+				</div>
+				<div class="main-container__observation">
+					<h2>Observação</h2>
+					<textarea type="text" class="container__observation__text"></textarea>
+				</div>
+				
+			</section>
+			<div class="main-container__photograph">
+				<h2>Adicionar foto (opcional)</h2>
+				<label for="add-img" class="add-photo">
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width = "4rem"><path d="M258.9 48C141.92 46.42 46.42 141.92 48 258.9c1.56 112.19 92.91 203.54 205.1 205.1 117 1.6 212.48-93.9 210.88-210.88C462.44 140.91 371.09 49.56 258.9 48zm126.42 327.25a4 4 0 01-6.14-.32 124.27 124.27 0 00-32.35-29.59C321.37 329 289.11 320 256 320s-65.37 9-90.83 25.34a124.24 124.24 0 00-32.35 29.58 4 4 0 01-6.14.32A175.32 175.32 0 0180 259c-1.63-97.31 78.22-178.76 175.57-179S432 158.81 432 256a175.32 175.32 0 01-46.68 119.25z" fill="#9b9b9b"/><path d="M256 144c-19.72 0-37.55 7.39-50.22 20.82s-19 32-17.57 51.93C191.11 256 221.52 288 256 288s64.83-32 67.79-71.24c1.48-19.74-4.8-38.14-17.68-51.82C293.39 151.44 275.59 144 256 144z" fill="#9b9b9b"/></svg>
+				</label>
+				
+				<input type="file" name="add-img" id="add-img" class="main-container__observation__input-image">
+				<div class="main-container__select-color">
+					<h2>Cor do currículo</h2>
+					<label class="main-container__btn-color-label" for="btncolor"><ion-icon name="color-palette-outline"></ion-icon></label>
+					<input type="color" class="main-container__btn-color" name="btncolor" id="btncolor">
+				</div>
+			</div>
+			<section class="container-crr-style">
+				<div class="main-container__style">
+					<div class="btn-toggle-contaienr">
+						<h2 class="add-date-text">Adicionar data</h2>
+						<label for="btn-toggle" class="btn-toggle-label">
+							<input type="checkbox" name="btnToggle" id="btn-toggle">
+							<div class="div-toggle">
+								<div class="div-toggle__circle"></div>
+							</div>
+						</label>
+					</div>
+				</div>
+				
+				<div class="main-container__style__font">
+					<div class="main-container__style__font-texts">
+						<h2 class="main-container__style__font-title">Escolher fonte</h2>
+						
+						<select name="" id="option-fonts">
+							<option value="Poppins">Poppins</option>
+							<option value="Montserrat">Montserrat</option>
+							<option value="Roboto">Roboto</option>
+							<option value="Lato">Lato</option>
+						</select>
+					</div>
+				</div>
+				<div class="main-container__style__font">
+					<div class="main-container__style__font-texts">
+						<h2 class="main-container__style__font-title">Tamanho da fonte</h2>
+						
+						<select name="" id="option-fonts-size">
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="14">14</option>
+							<option value="16">16</option>
+							<option value="18">18</option>
+							<option value="20">20</option>
+						</select>
+					</div>
+				</div>
+			</section>
         </main>
         <div class="main-container__download">
+			<button class="main-container__btnPreview">Visualizar</button>
         	<button class="main-container__btndownload">Baixar<ion-icon name="cloud-download-outline" class="icon-download"></ion-icon></button>
         </div>
         <div class="curriculo-generation">
         	<img class="img-upload" src="">
+			<div class="curriculo-create"></div>
         </div>
+		<section class="section-objective" id="section-objective-id">
+			<div class="section-carrousel-container">
+				<button class="js-carousel--simple-prev"><ion-icon name="caret-back-outline"></ion-icon></button>
+				<div class="section-objective-container js-carousel--simple">
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Tenho uma carreira baseada em grandes desafios. Por esta razão, acredito que essa seja uma oportunidade ideal para eu poder demonstrar e desenvolver habilidades de liderança e trabalho em equipe, além dos meus conhecimentos e habilidades."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Trabalhar em conjunto num ambiente de trabalho onde eu possa colocar os meus conhecimentos em prática em prol da instituição onde pretendo integrar, tendo sempre em mente os interesses e crescimento da organização e o desenvolvimento profissional."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"O desenvolvimento profissional é um dos meus objetivos na empresa, cumprindo as responsabilidades que a mim serão atribuídas, aplicando as normas de biossegurança, garantindo a saúde, integridade e segurança de todos os colaboradores, bem como o crescimento da equipe."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Trabalhar neste setor (vagas selecionadas) ampliará o meu conhecimento, desenvolvimento profissional e de vida, em conjunto com a qualidade do meu trabalho e minha preparação para o dia, para alcançar o sucesso esperado a partir do momento da minha contratação."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Eu gostaria de colaborar em um ambiente de trabalho onde eu tenha a oportunidade de colocar os meus conhecimentos em prática para apoiar (nome da empresa), sempre colaborando para o crescimento da organização e da minha vida profissional."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Colaborar num ambiente de trabalho onde possa colocar os meus conhecimentos em prática em apoio à organização que pretendo integrar, focando tanto no crescimento da organização bem como no meu crescimento profissional."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Com minhas habilidades comportamentais e experiências adquiridas ao longo dos anos, gostaria de atuar em uma empresa que possa contribuir para o desenvolvimento de projetos inovadores na área tecnológica."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Procuro oportunidades para desenvolver e aprimorar meus conhecimentos, e algo que possa me guiar de forma cada vez maior e contínua, sempre com o objetivo de crescer entre mim e a empresa."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Meu objetivo é usar toda a minha experiência neste campo em benefício da empresa, bem como para o meu próprio desenvolvimento profissional."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Contribuir para os interesses desta prestigiada instituição, com as minhas competências como parte efetiva do quadro de colaboradores, tendo como principais funções o compromisso, o respeito e a lealdade."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Meu objetivo é trabalhar para uma empresa líder de mercado e acredito que minha vasta experiência na área de _____, ajudará a apresentar soluções efetivas e ousadas no mercado."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Procuro oportunidades para desenvolver e aprimorar meus conhecimentos, e algo que possa me guiar na vida profissional, sempre com o objetivo do crescimento da empresa e pessoal."</p>
+					</div>
+					<div class="meta-examples-container__card">
+						<button class="meta-examples-container__card__button"><ion-icon name="copy-outline"></ion-icon></button>
+						<p class="meta-examples-container__card__text">"Busco novos desafios profissionais, visando um espaço no mercado de trabalho, a fim de desenvolver todo o trabalho e produzir resultados. Quero ser o instrumento de crescimento qualitativo e quantitativo para a empresa."</p>
+					</div>
+				</div>
+				<button class="js-carousel--simple-next"><ion-icon name="caret-forward-outline"></ion-icon></button>
+			</div>
+			
+  			<div class="js-carousel--simple-dots"></div>
+		</section>
         <section class="section-tips" id="section-tips-id">
         	<p class="section-tips__title">Dicas para um bom currículo</p>
         	<div class="section-tips__cards">
@@ -170,8 +306,10 @@
         		</div>
         	</div>
         </div>
+		<div class="notification-container"></div>
         <footer class="footer-container">
         	<h3>&copy GeraCur, todos os direitos reservados.</h3>
         </footer>
+		<script src="Glider.js-master/glider.min.js"></script>	
     </body>
 </html>

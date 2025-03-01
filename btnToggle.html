@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #btn-toggle{
+            display: none;
+        }
+        .btn-toggle-contaienr{
+            width: 10rem;
+            background-color: aqua;
+        }
+        .btn-toggle-label{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .div-toggle{
+            background-color: rgb(158, 158, 158);
+            width: 3.5rem;
+            height: 1.5rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            padding-left: 2px;
+            position: relative;
+            cursor: pointer;
+        }
+        .div-toggle__circle{
+            background-color: #FFF;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            transition: .4s all ease;
+        }
+        #btn-toggle:checked + .div-toggle::after{
+            content: "";
+            width: 3.3rem;
+            height: 1.4rem;
+            background-color: red;
+            border-radius: .99rem;
+        }
+        #btn-toggle:checked + .div-toggle > .div-toggle__circle{
+            position: absolute;
+            transition: .4s all ease;
+            transform: translateX(2.2rem);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="btn-toggle-contaienr">
+        <label for="btn-toggle" class="btn-toggle-label">
+            
+            <span class="add-date-text">Adicionar data</span>
+            <input type="checkbox" name="btnToggle" id="btn-toggle">
+            <div class="div-toggle">
+                <div class="div-toggle__circle"></div>
+            </div>
+        </label>
+    </div>
+</body>
+</html>
