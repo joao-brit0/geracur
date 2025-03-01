@@ -1,12 +1,15 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 
+
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style: none;
+}
+body{
 	font-family: 'Poppins', sans-serif;
 }
 html{
@@ -145,12 +148,19 @@ html{
 .main-container{
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column;
 	position: relative;
+	border: 1px solid #e0e1dd;
+}
+.form-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	color: #0d1b2a;
 	margin-top: 1rem;
-	border: 1px solid #e0e1dd;
 	padding: 1rem;
+	max-width: 1300px;
 }
 .main-container__text-data{
 	color: #9b9b9b;
@@ -163,14 +173,41 @@ html{
 .main-container__training,
 .main-container__experience,
 .main-container__observation,
-.main-container__data,
-.main-container__photograph{
+.main-container__linkeDin,
+.main-container__photograph,
+.main-container__address,
+.main-container__email,
+.main-container__contact,
+.main-container__style{
 	margin: 2rem;
 	font-size: .60rem;
 	font-weight: 400;
 	position: relative;
 }
 
+.btn-training-add{
+	position: absolute;
+	background: none;
+	border: none;
+	right: 0;
+	top: -.50rem;
+	font-size: 1.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: #6990c2;
+}
+.training-add-text.addVisible{
+	position: absolute;
+	right: 2rem;
+	font-size: .80rem;
+	color: #12c562;
+	display: block;
+}
+.training-add-text{
+	display: none;
+}
 .main-container__data__icon{
 	cursor: pointer;
 	font-size: 1.5rem;
@@ -188,6 +225,7 @@ html{
 	top: 1rem;
 	left: -1.5rem;
 	display: none;
+	z-index: 2;
 }
 .main-container__data__doubt.doubt_visible{
 	display: block;
@@ -197,6 +235,7 @@ textarea{
 	height: 2.5rem;
 	resize: none;
 	border: 1px solid rgba(0,0,0,.4);
+	font-family: 'Poppins', sans-serif;
 }
 .main-container__select-color{
 	display: flex;
@@ -204,14 +243,107 @@ textarea{
 	align-items: center;
 	margin-top: 2rem;
 }
+.container-crr-style{
+	display: flex;
+	flex-wrap: wrap;
+}
+#btn-toggle,
+#btn-toggle-2{
+	display: none;
+}
+.btn-toggle-label{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.div-toggle{
+	background-color: rgb(158, 158, 158);
+	width: 3.5rem;
+	height: 1.4rem;
+	border-radius: 1rem;
+	display: flex;
+	align-items: center;
+	padding-left: 2px;
+	position: relative;
+	cursor: pointer;
+}
+.add-date-text{
+	margin-right: 1rem;
+}
+.btn-toggle-contaienr{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.div-toggle__circle{
+	background-color: #FFF;
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	transition: .4s all ease;
+}
+#btn-toggle:checked + .div-toggle::after,
+#btn-toggle-2:checked + .div-toggle::after{
+	content: "";
+	width: 3.3rem;
+	height: 1.4rem;
+	background-color: #6990c2;
+	border-radius: .99rem;
+}
+#btn-toggle:checked + .div-toggle > .div-toggle__circle,
+#btn-toggle-2:checked + .div-toggle > .div-toggle__circle{
+	position: absolute;
+	transition: .4s all ease;
+	transform: translateX(2.1rem);
+}
+.main-container__style__font{
+	margin-left: 2rem;
+}
+.main-container__style__font-texts{
+	font-size: 1.5rem;
+	margin-top: 2rem;
+}
+.main-container__style__font-title{
+	font-size: .90rem;
+	margin-right: .90rem;
+}
+.main-container__style__font-texts{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.main-container__style__font__list{
+	border: 1px solid #000;
+	padding: 1rem;
+	display: none;
+}
+.main-container__style__font__list.contianerCheckVisible{
+	display: block;
+}
+.scale-up-ver-center{
+	-webkit-animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+.btn-check-icon{
+	cursor: pointer;
+	margin-left: 1rem;
+}
+.font__list__items{
+	display: flex;
+}
+.font-text{
+	margin-left: .80rem;	
+}
 .main-container__download{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 3rem;
 }
-.main-container__btndownload{
-	padding: 1rem 4rem;
+.main-container__btndownload,
+.main-container__btnPreview{
+	padding: 1rem 0 1rem 0;
+	width: 12rem;
 	font-size: 1rem;
 	background-color: #1b263b;
 	color: #e0e1dd;
@@ -220,7 +352,19 @@ textarea{
 	cursor: pointer;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	transition: .5s;
+}
+.main-container__btnPreview{
+	background-color: transparent;
+	border: 1px solid #1b263b;
+	margin-bottom: 1rem;
+	color: #1b263b;
+}
+.main-container__btnPreview:hover{
+	background-color: #778da9;
+	color: #FFF;
+	border-color: #778da9;
 }
 .main-container__btndownload:hover{
 	background-color: #415A77;
@@ -229,6 +373,18 @@ textarea{
 .icon-download{
 	margin-left: .60rem;
 }
+.section-objective{
+	margin-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.section-carrousel-container{
+	width: 70%;
+	display: flex;
+	align-items: center;
+}
+
 .section-tips{
 	height: 100%;
 	margin-top: 3rem;
@@ -316,18 +472,40 @@ input[type="file"],
 input[type="color"]{
     display: none;
 }
-label{
-	padding: 1.5rem;
-    border: 1px solid #0d1b2a;
-    display: block;
+.add-photo{
+    display: flex;
+	align-items: center;
+	justify-content: center;
     margin-top: 10px;
     cursor: pointer;
 }
 .main-container__btn-color-label{
-	border-radius: 50%;
-	background: linear-gradient(90deg, rgba(13,27,42,1) 0%, rgba(27,38,59,1) 100%);
+	font-size: 3rem;
+	cursor: pointer;
 }
 
+
+ @-webkit-keyframes scale-up-ver-center {
+	0% {
+	  -webkit-transform: scaleY(0.4);
+			  transform: scaleY(0.4);
+	}
+	100% {
+	  -webkit-transform: scaleY(1);
+			  transform: scaleY(1);
+	}
+  }
+  @keyframes scale-up-ver-center {
+	0% {
+	  -webkit-transform: scaleY(0.4);
+			  transform: scaleY(0.4);
+	}
+	100% {
+	  -webkit-transform: scaleY(1);
+			  transform: scaleY(1);
+	}
+  }
+  
 
 @media (max-width: 900px){
 	.header-container__image{
@@ -411,5 +589,8 @@ label{
 	}
 	.section-tips__title{
 		font-size: 1.3rem;
+	}
+	.container-crr-style{
+		padding-left: 2rem;
 	}
 }

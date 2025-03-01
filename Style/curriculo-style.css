@@ -1,23 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+.class-montserrat{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+.class-roboto{
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+
+}
 
 .curriculo-generation__name,
 .curriculo-generation__meta,
 .curriculo-generation__training,
 .curriculo-generation__experience,
 .curriculo-generation__observation,
-.curriculo-generation__data{
+.curriculo-generation__address__text{
 	margin: 2rem;
+}
+
+.dateTextCrr{
+	margin: 5rem auto auto 45%;
+	font-style: italic;
+}
+.icons-curriculo{
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.text-curriculo.dote,
+.text-curriculo-list{
+	list-style: inside;
 }
 .text-curriculo{
 	margin-left: 1.5rem;
-	text-indent: 15px;
+	text-indent: 10px;
+}
+.curriculo-generation__training-list{
+	margin-top: 2rem;
+}
+.curriculo-generation-design{
+	width: 91%;
+	height: 6px;
+	margin: 2rem;
+	background-color: #000;
+	border-radius: 20px;
 }
 .img-upload{
 	width: 100px;
 	height: 100px;
 	margin-bottom: 40px;
 	margin-left: 2rem;
+	margin-top: 1rem;
 	display: none;
 }
 .img-upload.img-visible{
